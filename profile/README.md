@@ -1,33 +1,39 @@
-# 🦀 Crabbit
+# 🐰 Crabbit - MemeCore Memekathon 2025
 
-> **Social Trading Meets Meme ETF Strategy**
-> Invest in curated meme coin portfolios managed by AI and human strategists on MemeCore
+> **On-Chain Meme Coin ETF Platform**
+> Share-based vault strategy investment for MemeCore ecosystem
 
-[![MemeCore](https://img.shields.io/badge/Built%20on-MemeCore-orange)](https://memecore.com)
-[![Solidity](https://img.shields.io/badge/Solidity-0.8.24-blue)](https://soliditylang.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Built on MemeCore](https://img.shields.io/badge/Built%20on-MemeCore-orange)](https://memecore.com) [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-blue)](https://soliditylang.org/) [![Tests](https://img.shields.io/badge/Tests-170%20Passing-green)](https://github.com/crabbit-team/contract)
+
+- 🌐 **[Launch App](https://crabbitweb.vercel.app/)**
+- 🏆 **[MemeCore Memekathon 2025](https://memekathon.memecore.com/ko)**
 
 ---
 
-## 🎯 What is Crabbit?
+## 📦 Repositories
 
-Crabbit is a **gamified on-chain ETF platform** for meme coins built exclusively on MemeCore. Unlike traditional copy-trading where followers suffer from slippage and front-running, Crabbit uses **ERC-4626 vault shares** to ensure all investors get the same price regardless of when they enter.
+| Repository | Description |
+|------------|-------------|
+| [**contract**](https://github.com/crabbit-team/contract) | Smart contracts (Vault shares, Uniswap V3 integration) |
+| [**backend**](https://github.com/crabbit-team/backend) | FastAPI backend (vault data, token prices) |
+| [**frontend**](https://github.com/crabbit-team/frontend) | Next.js web app (vault UI, portfolio tracking) |
 
-### The Problem We Solve
+---
 
-- **High Volatility**: Single meme coin bets are extremely risky
-- **Low Liquidity**: Most meme tokens have shallow markets causing price manipulation
-- **Information Asymmetry**: Twitter calls and Telegram signals are unverifiable and often scams
-- **Copy-Trading Failures**: Followers lose money due to slippage while leaders profit first
-- **Complex UX**: Managing wallets, gas, swaps, and bridges is too difficult for newcomers
+## 🎯 Problem & Solution
+
+### The Problem
+- **High Volatility**: Single meme coin investments carry extreme risk
+- **Copy-Trading Slippage**: Followers lose money when leader trades execute first
+- **Low Liquidity**: Shallow markets cause price manipulation and failed trades
+- **Complex UX**: Managing multiple tokens requires advanced DeFi knowledge
 
 ### Our Solution
+✅ **Tokenized Vault Shares**: All investors get identical NAV per share—eliminates front-running
+✅ **Diversified Portfolios**: Reduce single-token risk through multi-asset vaults
+✅ **USDC-Only Entry**: Single-token investment, no need to manage individual meme coins
+✅ **TWAP Oracle Pricing**: Manipulation-resistant pricing via Uniswap V3 30-minute TWAP
 
-✅ **ETF-Style Vaults**: Diversified meme coin portfolios reduce single-token risk
-✅ **Share-Based Investment**: All investors get the same NAV per share—no front-running
-✅ **AI Strategy Assistant**: Anyone can create professional-grade portfolios with AI help
-✅ **Social Leaderboard**: Transparent performance tracking with reputation system
-✅ **One-Click Investment**: Buy vault shares with USDC only—no need to manage individual tokens
 
 ---
 
@@ -68,59 +74,45 @@ Crabbit is a **gamified on-chain ETF platform** for meme coins built exclusively
 
 ---
 
-## 📦 Repositories
+## 🔧 Technical Implementation
 
-### 🔧 [contract](https://github.com/crabbit-team/contract)
-Smart contracts powering the vault system
+### Smart Contracts (Solidity 0.8.24)
+**Repository**: [contract](https://github.com/crabbit-team/contract)
 
-**Key Features:**
-- ERC-4626 compliant vault implementation
-- Uniswap V3 TWAP price oracle integration
-- Manager NFT for vault ownership
-- CRT token utility and fee collection
-- Comprehensive test suite (170 tests)
+**Deployed Features:**
+- ✅ Vault share token implementation with minimal proxy pattern
+- ✅ MemeVaultFactory for vault deployment
+- ✅ UniswapV3TWAPOracle (30-minute TWAP)
+- ✅ VaultManagerNFT (ownership management)
+- ✅ CrtToken (500 CRT vault creation fee)
+- ✅ FeeCollector (70% burn, 30% treasury)
+- ✅ RewardDistributor with signature-based claims
+- ✅ 170 passing tests (100% core functionality coverage)
 
-**Tech Stack:** Solidity 0.8.24, Foundry, OpenZeppelin
+**Tech Stack:** Foundry, OpenZeppelin 5.1.0, Uniswap V3
 
-### 🖥️ [backend](https://github.com/crabbit-team/backend)
-FastAPI backend serving vault data and token information
+### Backend API (Python 3.11+)
+**Repository**: [backend](https://github.com/crabbit-team/backend)
 
-**Key Features:**
-- Real-time vault TVL and share price calculation
-- Token price aggregation from on-chain sources
-- RESTful API with automatic documentation
-- Decimal-adjusted responses for frontend consumption
+**Implemented Features:**
+- ✅ Vault TVL and NAV calculation (decimal-adjusted)
+- ✅ Token price aggregation from on-chain sources
+- ✅ RESTful API with FastAPI auto-docs
+- ✅ Web3.py integration with MemeCore RPC
+- ✅ Real-time share price updates
 
-**Tech Stack:** Python 3.11+, FastAPI, Web3.py, Pydantic
+**Tech Stack:** FastAPI, Web3.py, Pydantic, Uvicorn
 
-### 🎨 [frontend](https://github.com/crabbit-team/frontend)
-Next.js web application for investors and managers
+### Frontend (Next.js 14)
+**Repository**: [frontend](https://github.com/crabbit-team/frontend)
 
-**Key Features:**
-- Vault discovery and investment interface
-- AI-assisted strategy creation
-- Real-time portfolio tracking
-- Responsive design for mobile and desktop
+**Features:**
+- Vault discovery and filtering UI
+- Investment flow (USDC → Vault shares)
+- Portfolio tracking dashboard
+- wagmi/viem wallet integration
 
-**Tech Stack:** Next.js 14, TypeScript, TailwindCSS, wagmi/viem
-
----
-
-## 🚀 Quick Start
-
-### For Investors
-
-1. **Connect Wallet** → MetaMask or WalletConnect
-2. **Browse Vaults** → Filter by performance, risk, or strategy type
-3. **Invest USDC** → One-click purchase of vault shares
-4. **Track Portfolio** → Monitor NAV and performance in real-time
-
-### For Managers
-
-1. **Create Strategy** → Use AI assistant or manual configuration
-2. **Deploy Vault** → Factory creates your ERC-4626 vault
-3. **Add Liquidity** → Initialize with meme coin positions
-4. **Earn Fees** → 2% management fee + 20% performance fee
+**Tech Stack:** Next.js 14, TypeScript, TailwindCSS, wagmi
 
 ---
 
@@ -131,89 +123,20 @@ Next.js web application for investors and managers
 **RPC**: https://rpc.insectarium.memecore.net
 **Explorer**: https://insectarium.blockscout.memecore.com
 
-### Core Contracts
-
-| Contract | Address | Explorer |
-|----------|---------|----------|
-| MemeVaultFactory | `0xC83C2F3D8DB882dF24ACC770978C66c95FAcDa25` | [View](https://insectarium.blockscout.memecore.com/address/0xc83c2f3d8db882df24acc770978c66c95facda25) |
-| UniswapV3TWAPOracle | `0xAD6acF19b5eEd4580C9513a8F4A9DC86A1E66c40` | [View](https://insectarium.blockscout.memecore.com/address/0xad6acf19b5eed4580c9513a8f4a9dc86a1e66c40) |
-| CrtToken | `0x8371e24Ad7252f4BE6dE1AE7F589Fd82A4bcb940` | [View](https://insectarium.blockscout.memecore.com/address/0x8371e24ad7252f4be6de1ae7f589fd82a4bcb940) |
-
-*See individual repositories for full deployment details*
-
----
-
-## 🎮 Gamification Features
-
-### 🏆 Vault Tiers
-- **Diamond** (Top 5%): Best performing vaults
-- **Platinum** (Top 10%): Excellent track record
-- **Gold** (Top 25%): Solid performance
-- **Silver** (Top 50%): Decent returns
-- **Bronze** (Top 75%): Entry level
-- **Iron** (All others): New or underperforming
-
-### 📊 Leaderboard Metrics
-- Total Value Locked (TVL)
-- 7-day / 30-day / All-time Returns
-- Sharpe Ratio & Max Drawdown
-- Active Investor Count
-
-### 🎯 Battle Mode (Future)
-- Compete against AI strategies
-- Seasonal rankings and rewards
-- Strategy duplication and evolution
-
----
-
-## 🔐 Security
-
-✅ **Audited Contracts**: Core logic reviewed and tested
-✅ **Non-Custodial**: Users maintain full control of funds
-✅ **TWAP Oracle**: Manipulation-resistant pricing
-✅ **Manager Reputation**: On-chain track record prevents rug pulls
-✅ **Slippage Protection**: Swap limits and minimum output checks
-
----
-
 ## 📚 Documentation
 
-- [Contract Documentation](https://github.com/crabbit-team/contract#readme)
-- [API Documentation](https://github.com/crabbit-team/backend#readme)
-- [Frontend Guide](https://github.com/crabbit-team/frontend#readme)
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see individual repository CONTRIBUTING.md files for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📞 Contact & Community
-
-- **Twitter**: [@CrabbitFi](https://twitter.com/CrabbitFi) *(example)*
-- **Discord**: [Join our server](https://discord.gg/crabbit) *(example)*
-- **Email**: hello@crabbit.fi *(example)*
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Contract Documentation](https://github.com/crabbit-team/contract#readme) - Solidity contracts, deployment, testing
+- [API Documentation](https://github.com/crabbit-team/backend#readme) - Backend API endpoints, data models
+- [Frontend Guide](https://github.com/crabbit-team/frontend#readme) - UI components, wallet integration
 
 ---
 
 <div align="center">
 
-**Built with 🦀 for MemeCore Memekathon 2024**
+**Built for MemeCore Memekathon 2025**
 
-*Democratizing meme coin investing through ETF strategies and social trading*
+*On-chain meme coin ETF platform powered by tokenized vault shares*
+
+[Contract](https://github.com/crabbit-team/contract) • [Backend](https://github.com/crabbit-team/backend) • [Frontend](https://github.com/crabbit-team/frontend)
 
 </div>
