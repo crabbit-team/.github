@@ -1,9 +1,14 @@
-# 🐰 Crabbit - MemeCore Memekathon 2025
+<div align="center">
 
-> **On-Chain Meme Coin ETF Platform**
-> Share-based vault strategy investment for MemeCore ecosystem
+<img src="https://raw.githubusercontent.com/crabbit-team/frontend/main/public/logos/Tokki.png" alt="Tokki" width="120"/>
+
+<img src="https://raw.githubusercontent.com/crabbit-team/frontend/main/public/logos/logo.png" alt="Crabbit Logo" width="280"/>
+
+*Share-based vault strategy investment for MemeCore ecosystem*
 
 [![Built on MemeCore](https://img.shields.io/badge/Built%20on-MemeCore-orange)](https://memecore.com) [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-blue)](https://soliditylang.org/) [![Tests](https://img.shields.io/badge/Tests-170%20Passing-green)](https://github.com/crabbit-team/contract)
+
+</div>
 
 - 🌐 **[Launch App](https://crabbitweb.vercel.app/)**
 - 🏆 **[MemeCore Memekathon 2025](https://memekathon.memecore.com/ko)**
