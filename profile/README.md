@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/crabbit-team/frontend/main/public/logos/Tokki.png" alt="Tokki" width="120"/>
-  <br><br>
+  <br>
   <img src="https://raw.githubusercontent.com/crabbit-team/frontend/main/public/logos/logo.png" alt="Crabbit Logo" width="280"/>
 </p>
 
