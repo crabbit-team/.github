@@ -36,10 +36,10 @@
 - **Complex UX**: Managing multiple tokens requires advanced DeFi knowledge
 
 ### Our Solution
-✅ **Tokenized Vault Shares**: All investors get identical NAV per share—eliminates front-running
-✅ **Diversified Portfolios**: Reduce single-token risk through multi-asset vaults
-✅ **USDC-Only Entry**: Single-token investment, no need to manage individual meme coins
-✅ **TWAP Oracle Pricing**: Manipulation-resistant pricing via Uniswap V3 30-minute TWAP
+- ✅ **Tokenized Vault Shares**: All investors get identical NAV per share—eliminates front-running
+- ✅ **Diversified Portfolios**: Reduce single-token risk through multi-asset vaults
+- ✅ **USDC-Only Entry**: Single-token investment, no need to manage individual meme coins
+- ✅ **TWAP Oracle Pricing**: Manipulation-resistant pricing via Uniswap V3 30-minute TWAP
 
 
 ---
@@ -125,10 +125,10 @@
 
 ## 🌟 Live Deployment
 
-**Network**: MemeCore Insectarium Testnet
-**Chain ID**: 43522
-**RPC**: https://rpc.insectarium.memecore.net
-**Explorer**: https://insectarium.blockscout.memecore.com
+- **Network**: MemeCore Insectarium Testnet
+- **Chain ID**: 43522
+- **RPC**: https://rpc.insectarium.memecore.net
+- **Explorer**: https://insectarium.blockscout.memecore.com
 
 ## 📚 Documentation
 
